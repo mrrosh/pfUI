@@ -490,6 +490,7 @@ function pfUI.uf:UpdateConfig()
   f.power:SetPoint(f.config.panchor, f.hp, relative_point, f.config.poffx, -2*default_border - f.config.pspace + f.config.poffy * GetPerfectPixel())
   f.power:SetWidth((f.config.pwidth ~= "-1" and f.config.pwidth or f.config.width))
   f.power:SetHeight(f.config.pheight)
+  f.power:SetFrameStrata("HIGH")
   if tonumber(f.config.pheight) < 0 then f.power:Hide() end
 
   pfUI.api.CreateBackdrop(f.power, default_border)
